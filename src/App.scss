@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap");
+
+$side: 40px;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #000;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+}
+input {
+  height: 40px;
+  margin: 0;
+  padding: 0 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  vertical-align: top;
+}
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+button {
+  background-color: initial;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+.btn_link {
+  min-width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Noto Sans KR", sans-serif;
+  transition: all 0.3s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+  }
+}
+.wrapper {
+  overflow-x: hidden;
+}
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .inner {
+    padding: 0 $side;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      .logo {
+        width: 150px;
+      }
+      .menu {
+        margin-left: 40px;
+        a {
+          margin-right: 30px;
+          font-size: 16px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        &.on {
+          input {
+            margin-right: 20px;
+            right: 100%;
+            opacity: 1;
+            pointer-events: initial;
+          }
+        }
+        input {
+          height: 30px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          opacity: 0;
+          pointer-events: none;
+          transition: all 0.3s;
+        }
+        button {
+          width: 30px;
+          height: 30px;
+          position: relative;
+          z-index: 1;
+          border-radius: 5px;
+          transition: all 0.3s;
+          &:hover {
+            color: #000;
+            background-color: #fff;
+          }
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.main_visual {
+  width: 100%;
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+  }
+  .info {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    .inner {
+      padding: 0 $side;
+      .title {
+        font-size: 34px;
+        font-weight: 600;
+      }
+      .desc {
+        margin-top: 10px;
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .btn_wrap {
+        margin-top: 15px;
+        a {
+          width: 140px;
+        }
+      }
+    }
+  }
+}
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  .lds-roller {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    div {
+      animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+      transform-origin: 40px 40px;
+
+      &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        margin: -4px 0 0 -4px;
+      }
+
+      &:nth-child(1) {
+        animation-delay: -0.036s;
+
+        &:after {
+          top: 63px;
+          left: 63px;
+        }
+      }
+
+      &:nth-child(2) {
+        animation-delay: -0.072s;
+
+        &:after {
+          top: 68px;
+          left: 56px;
+        }
+      }
+
+      &:nth-child(3) {
+        animation-delay: -0.108s;
+
+        &:after {
+          top: 71px;
+          left: 48px;
+        }
+      }
+
+      &:nth-child(4) {
+        animation-delay: -0.144s;
+
+        &:after {
+          top: 72px;
+          left: 40px;
+        }
+      }
+
+      &:nth-child(5) {
+        animation-delay: -0.18s;
+
+        &:after {
+          top: 71px;
+          left: 32px;
+        }
+      }
+
+      &:nth-child(6) {
+        animation-delay: -0.216s;
+
+        &:after {
+          top: 68px;
+          left: 24px;
+        }
+      }
+
+      &:nth-child(7) {
+        animation-delay: -0.252s;
+
+        &:after {
+          top: 63px;
+          left: 17px;
+        }
+      }
+
+      &:nth-child(8) {
+        animation-delay: -0.288s;
+
+        &:after {
+          top: 56px;
+          left: 12px;
+        }
+      }
+    }
+  }
+
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+.mainSubVisual {
+  margin-top: 40px;
+  padding-left: $side;
+  padding-right: $side;
+  .swiper {
+    overflow: visible;
+  }
+  .con_title {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+  .mainSubSlide {
+    margin-bottom: 50px;
+  }
+  .card {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: auto;
+  top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #999;
+  transition: all 0.3s;
+}
+.swiper-pagination-bullet-active {
+  width: 30px;
+  background-color: #fff;
+}

@@ -13,7 +13,7 @@ function App() {
     <div className="wrapper">
       <Header />
       <Routes>
-        <Route path={process.env.PUBLIC_URL} element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/movie/:id" element={<MovieDetail />} />
       </Routes>

@@ -7,14 +7,14 @@ const Header = () => {
       <div className="header">
         <div className="inner">
           <div className="left">
-            <Link to={process.env.PUBLIC_URL} className="logo">
+            <Link to="/" className="logo">
               <img
                 src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
                 alt=""
               />
             </Link>
             <div className="menu">
-              <Link to={process.env.PUBLIC_URL}>홈</Link>
+              <Link to="/">홈</Link>
               <Link to={"/movies"}>영화</Link>
             </div>
           </div>

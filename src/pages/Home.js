@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import MainConSlide from "../components/MainConSlide";
 import MainVisual from "../components/MainVisual";
@@ -13,6 +13,8 @@ const Home = () => {
   useEffect(() => {
     dispatch(movieAction.getMovies());
   }, [dispatch]);
+
+  console.log(process.env.PUBLIC_URL);
 
   if (loading) {
     return (

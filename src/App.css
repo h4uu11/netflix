@@ -11,6 +11,7 @@ body {
   color: #fff;
   font-size: 14px;
   line-height: 1.5;
+  word-break: keep-all;
 }
 
 input {
@@ -393,9 +394,70 @@ img {
   margin-bottom: 50px;
 }
 
+.mainSubVisual .swiper-slide {
+  z-index: 1;
+  -webkit-transition: z-index 0.3s;
+  transition: z-index 0.3s;
+}
+
+.mainSubVisual .swiper-slide:hover {
+  z-index: 2;
+  -webkit-transition: z-index 0.1s;
+  transition: z-index 0.1s;
+}
+
 .mainSubVisual .card {
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.mainSubVisual .card:hover {
+  -webkit-transform: scale(150%);
+          transform: scale(150%);
+}
+
+.mainSubVisual .card .info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mainSubVisual .card .info .genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainSubVisual .card .info .genre div {
+  margin-right: 10px;
+}
+
+.mainSubVisual .card .info .title {
+  font-size: 18px;
+}
+
+.mainSubVisual .card .info .voteViewAge {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainSubVisual .card .info .vote {
+  margin-right: 10px;
+}
+
+.mainSubVisual .card .info .viewAge {
+  width: 20px;
+  height: 20px;
 }
 
 .swiper-button-next,

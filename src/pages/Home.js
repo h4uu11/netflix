@@ -14,8 +14,6 @@ const Home = () => {
     dispatch(movieAction.getMovies());
   }, [dispatch]);
 
-  console.log(process.env.PUBLIC_URL);
-
   if (loading) {
     return (
       <>

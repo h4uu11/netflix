@@ -11,6 +11,7 @@ body {
   color: #fff;
   font-size: 14px;
   line-height: 1.5;
+  word-break: keep-all;
 }
 input {
   height: 40px;
@@ -301,9 +302,50 @@ img {
   .mainSubSlide {
     margin-bottom: 50px;
   }
+  .swiper-slide {
+    z-index: 1;
+    transition: z-index 0.3s;
+    &:hover {
+      z-index: 2;
+      transition: z-index 0.1s;
+    }
+  }
   .card {
     border-radius: 8px;
     overflow: hidden;
+    position: relative;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(150%);
+    }
+    .info {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: rgba(255, 255, 255, 0.8);
+      .genre {
+        display: flex;
+        div {
+          margin-right: 10px;
+        }
+      }
+      .title {
+        font-size: 18px;
+      }
+      .voteViewAge {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+      }
+      .vote {
+        margin-right: 10px;
+      }
+      .viewAge {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
 .swiper-button-next,
